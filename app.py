@@ -42,7 +42,7 @@ data = np.array([
 ]).reshape(1, -1)
 
 # Scaling (jika pakai)
-data_scaled = scaler.transform(data)
+
 
 # Prediksi
 if st.button("Prediksi"):
