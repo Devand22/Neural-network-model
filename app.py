@@ -7,7 +7,7 @@ import pickle
 # ------------------------------
 try:
     model = pickle.load(open('model_ann.pkl', 'rb'))
-    scaler = pickle.load(open('scaler.pkl', 'rb'))
+    
 except Exception as e:
     st.error(f"Gagal memuat model atau scaler: {e}")
     st.stop()
@@ -53,8 +53,6 @@ input_data = np.array([
 # ------------------------------
 if st.button("Prediksi"):
     try:
-        scaled_input = scaler.transform(input_data)
-        prediction = model.predict(scaled_input)
 
         if prediction[0] == 1:
             st.error("Hasil Prediksi: Berisiko Diabetes")
