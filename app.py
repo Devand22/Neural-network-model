@@ -13,7 +13,7 @@ import numpy as np
 
 # Load Model & Scaler
 model = pickle.load(open('model_ann.pkl', 'rb'))
-scaler = pickle.load(open('scaler.pkl', 'rb'))  # kalau kamu pakai scaler
+  # kalau kamu pakai scaler
 # Kalau ada encoder juga tinggal load
 
 st.title("Prediksi Resiko Diabetes")
