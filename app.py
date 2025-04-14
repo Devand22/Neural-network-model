@@ -53,6 +53,8 @@ input_data = np.array([
 # ------------------------------
 if st.button("Prediksi"):
     try:
+        # Karena tidak pakai scaler, langsung pakai input_data
+        prediction = model.predict(input_data)
 
         if prediction[0] == 1:
             st.error("Hasil Prediksi: Berisiko Diabetes")
